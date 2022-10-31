@@ -25,14 +25,14 @@ class Item {
         itemBox.appendChild(completeButton);
 
         let removeButton = document.createElement('button');
-        removeButton.textContent = "Delete"
+        removeButton.innerHTML = 'Delete';
         removeButton.classList.add('removeButton');
         itemBox.appendChild(removeButton);
 
         completeButton.addEventListener('click', () => {
             input.classList.add("line-through");
         });
-        
+
         removeButton.addEventListener('click', () => this.remove(itemBox));
         
     }
