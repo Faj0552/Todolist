@@ -12,16 +12,17 @@ class Item {
         input.classList.add('item__input');
         input.type = 'text';
 
-
+    
         let itemBox = document.createElement('div');
         itemBox.classList.add('item');
-      
+      //skapa checkbox för att markering när task är klar
         let completeButton = document.createElement('input');
         completeButton.type = 'checkbox';
         completeButton.classList.add('completeButton');
 
-        
 
+        
+     //skapa delete button 
         let removeButton = document.createElement('button');
         removeButton.innerHTML = 'Delete';
         removeButton.classList.add('removeButton');
@@ -31,7 +32,7 @@ class Item {
         itemBox.appendChild(completeButton);
         itemBox.appendChild(removeButton);
 
-
+       
         completeButton.addEventListener('click', () => {
             if (completeButton.checked == true ){
                 input.classList.add('done');
@@ -40,13 +41,14 @@ class Item {
         
         });
 
-        removeButton.addEventListener('click', () => this.remove(itemBox));
+     removeButton.addEventListener('click', () => this.remove(itemBox));
         
     }
     remove(itemBox) {
         container.removeChild(itemBox)
     }
 }
+
 addButton.addEventListener('click', () => {
     if (inputValue.value != "") {
         new Item(inputValue.value);
