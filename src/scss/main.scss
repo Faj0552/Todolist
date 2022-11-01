@@ -73,12 +73,17 @@ h1 {
     color: white;
     border: none;
     cursor: pointer;
+    &:hover{
+        color: purple;
+    }
 }
 p{
     text-align: center;
 }
+
 .done{
-    color: rgba(0, 0, 0, 0.095);
+    display: none;
+
 }
 
 
