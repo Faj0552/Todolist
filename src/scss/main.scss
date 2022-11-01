@@ -74,7 +74,15 @@ h1 {
     border: none;
     cursor: pointer;
 }
-.line-through{
-    text-decoration: line-through;
+p{
+    text-align: center;
 }
+.done{
+    color: rgba(0, 0, 0, 0.095);
+}
+.undo{
+    color: black;
+}
+
+
 
