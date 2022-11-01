@@ -9,28 +9,35 @@ class Item {
     createInput(itemName) {
         let input = document.createElement('input');
         input.value = itemName;
-        input.disabled = true;
         input.classList.add('item__input');
         input.type = 'text';
 
 
         let itemBox = document.createElement('div');
         itemBox.classList.add('item');
-        container.appendChild(itemBox);
-        itemBox.appendChild(input);
-
+      
         let completeButton = document.createElement('input');
         completeButton.type = 'checkbox';
         completeButton.classList.add('completeButton');
-        itemBox.appendChild(completeButton);
+
+        
 
         let removeButton = document.createElement('button');
         removeButton.innerHTML = 'Delete';
         removeButton.classList.add('removeButton');
+        
+        container.appendChild(itemBox);
+        itemBox.appendChild(input);
+        itemBox.appendChild(completeButton);
         itemBox.appendChild(removeButton);
 
+
         completeButton.addEventListener('click', () => {
-            input.classList.add("line-through");
+            if (completeButton.checked == true ){
+                input.classList.add('done');
+                
+            }
+        
         });
 
         removeButton.addEventListener('click', () => this.remove(itemBox));
@@ -46,11 +53,14 @@ addButton.addEventListener('click', () => {
         inputValue.value = "";
     }
     else 
-        alert ("Plese make your lists!")
+        alert ("Plese write somethings!")
 });
 
-new Item("Lyssna på music");
-new Item("Handla mat");
+let lists = [new Item("Lyssna på music"), new Item("Handla mat"), new Item("Läsa böcker")];
+
+
+
+
 
 
 
