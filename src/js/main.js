@@ -56,9 +56,9 @@ addButton.addEventListener('click', () => {
         alert ("Plese write somethings!")
 });
 
-new Item("Lyssna på music");
-new Item("Handla mat");
-new Item("Läsa böcker");
+let lists = [new Item("Lyssna på music"),
+new Item("Handla mat"),
+new Item ("Läsa böcker")];
 
 
 
