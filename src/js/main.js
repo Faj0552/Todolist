@@ -15,14 +15,12 @@ class Item {
     
         let itemBox = document.createElement('div');
         itemBox.classList.add('item');
-      //skapa checkbox för att markering när task är klar
         let completeButton = document.createElement('input');
         completeButton.type = 'checkbox';
         completeButton.classList.add('completeButton');
 
 
-        
-     //skapa delete button 
+    
         let removeButton = document.createElement('button');
         removeButton.innerHTML = 'Delete';
         removeButton.classList.add('removeButton');
@@ -58,7 +56,9 @@ addButton.addEventListener('click', () => {
         alert ("Plese write somethings!")
 });
 
-let lists = [new Item("Lyssna på music"), new Item("Handla mat"), new Item("Läsa böcker")];
+new Item("Lyssna på music");
+new Item("Handla mat");
+new Item("Läsa böcker");
 
 
 
